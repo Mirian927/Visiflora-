@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Your Vision Naturally | VisiFlora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --primary-blue: #1a365d;
+            --accent-green: #2f855a;
+            --light-green: #f0fff4;
+            --dark-gray: #2d3748;
+            --light-gray: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+
+        body {
+            color: var(--dark-gray);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        /* Hero Section com Imagem Integrada */
+        .hero {
+            background: linear-gradient(135deg, #eef2f7 0%, #e6fffa 100%);
+            padding: 40px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            line-height: 1.2;
+            padding: 0 10px;
+        }
+        .hero p {
+            font-size: 17px;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            padding: 0 15px;
+        }
+        
+        /* Banner da sua imagem */
+        .hero-image-container {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            padding: 0 15px;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 3px solid var(--white);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--white);
+            padding: 16px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-cta:hover {
+            background-color: #22543d;
+            transform: translateY(-2px);
+        }
+
+        /* Benefits Section */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .benefit-card {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 5px solid var(--accent-green);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            background-color: var(--light-green);
+        }
+        .ingredients-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+        .ingredient-tag {
+            background-color: var(--white);
+            color: var(--accent-green);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 30px;
+            border: 1px solid #c6f6d5;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            color: var(--dark-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            padding: 40px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 11px;
+            line-height: 1.5;
+            border-top: 1px solid #2d3748;
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Visi<span>Flora</span></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Support Your Vision Naturally</h1>
+            <p>Discover the powerful connection between your gut microbiome and crystal-clear eyesight. VisiFlora nourishes your body from within, shielding and enhancing your visual health.</p>
+            
+            <!-- AQUI FICA A SUA IMAGEM DO PRODUTO -->
+            <div class="hero-image-container">
+                <img class="hero-image" src="COLE_O_LINK_DA_SUA_IMAGEM_AQUI" alt="VisiFlora Special Offer">
+            </div>
+
+            <a href"https://7b9edav9uywoks1uxnmbqk34ec.hop.clickbank.net" class="btn-cta">VISIT OFFICIAL WEBSITE</a>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Natural Eye Support?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Shield Against Blue Light</h3>
+                    <p>Formulated with essential antioxidants that filter harmful screen light, reducing eye strain and fatigue.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Enhanced Retinal Support</h3>
+                    <p>Nourishes your eyes with target nutrients, helping you maintain sharp central vision and night clarity.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Gut-Eye Axis Optimization</h3>
+                    <p>A unique approach that ensures peak nutrient absorption, translating digestive wellness into visual freedom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="section ingredients">
+        <div class="container">
+            <h2 class="section-title">Premium Botanical Ingredients</h2>
+            <p style="text-align: center; max-width: 600px; margin: -20px auto 30px auto; color: var(--dark-gray); padding: 0 15px;">VisiFlora is crafted with highly bioavailable, pure plant extracts to support healthy visual aging.</p>
+            <div class="ingredients-list">
+                <span class="ingredient-tag">Lutein & Zeaxanthin</span>
+                <span class="ingredient-tag">Grape Seed Extract</span>
+                <span class="ingredient-tag">Bilberry Fruit</span>
+                <span class="ingredient-tag">Astaxanthin</span>
+                <span class="ingredient-tag">Citrus Bioflavonoids</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">How does VisiFlora support my eyes?</div>
+                <div class="faq-answer">VisiFlora uses high-potency antioxidants to protect sensitive ocular cells from free radical damage and digital screen strain, while supporting the blood flow required for sharp eyesight.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to see results?</div>
+                <div class="faq-answer">While individual experiences vary, many users report feeling reduced eye fatigue and improved contrast sensitivity within 4 to 6 weeks of daily, consistent use.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is this formula completely natural?</div>
+                <div class="faq-answer">Yes. VisiFlora is formulated with premium, plant-based non-GMO botanical ingredients manufactured in a strict, quality-controlled facility.</div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://7b9edav9uywoks1uxnmbqk34ec.hop.clickbank.net" class="btn-cta">VISIT OFFICIAL WEBSITE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 VisiFlora. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Support</a>
+            </p>
+            <div class="disclaimer">
+                <p>Disclaimer: This site is not a part of the Google website or Google Inc. Additionally, this site is NOT endorsed by Google in any way. Google is a trademark of Google, Inc.</p>
+                <p style="margin-top: 10px;">The information on this website has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+index.html
